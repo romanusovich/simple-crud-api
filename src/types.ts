@@ -7,7 +7,7 @@ export type reqUser = {
 export function isRequiredUser(user: reqUser): boolean {
     const keys = Object.keys(user);
     const isRequire = ['username', 'age', 'hobbies'].every((key) => keys.indexOf(key) !== -1);
-    return isRequire;
+    return isRequire && keys.length === 4; // ID too
 }
 
 export type User = {
