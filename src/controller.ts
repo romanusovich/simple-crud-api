@@ -66,7 +66,7 @@ export class Controller {
                     id,
                     ...newUser
                 };
-                if (isRequiredUser(user)) Users[Users.indexOf(user)] = actualUser;
+                if (isRequiredUser(actualUser)) Users[Users.indexOf(user)] = actualUser;
                 else reject({
                     status: 400,
                     message: `${user} does not contain required fields`,
