@@ -5,7 +5,7 @@
   "scripts": {
     "start:dev": "nodemon src/app.ts",
     "start:prod": "webpack --mode=production --node-env=production && node dist/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --silent",
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "watch": "webpack --watch"
