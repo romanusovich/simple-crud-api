@@ -1,6 +1,6 @@
 import { Users } from "./data";
 import * as uuid from 'uuid';
-import { User, isRequiredUser, reject, reqUser, resolve } from "./types";
+import { User, isRequiredUser, reqUser } from "./types";
 
 export class Controller {
     // GET ALL USERS
@@ -56,7 +56,7 @@ export class Controller {
                 status: 400,
                 message: `id ${id} is not uuid`,
             });
-            let user: User | undefined = Users.find((user) => user.id === id);
+            const user: User | undefined = Users.find((user) => user.id === id);
             if (!user) reject({
                 status: 404,
                 message: `User with id ${id} not found`,
