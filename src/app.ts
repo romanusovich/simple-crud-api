@@ -4,7 +4,7 @@ import { Controller } from './controller';
 import { getReqData } from './utils';
 import { resolve } from './types';
 
-const PORT = process.env.STATUS === 'prod' ? process.env.PROD_PORT : process.env.DEV_PORT;
+const PORT = process.env.PORT || 4000;
 const CONTROLLER = new Controller();
 
 const server = http.createServer(async (req, res) => {
